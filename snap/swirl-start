@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# read in from .env file
+if [ -f $SNAP_DATA/env ]; then
+  echo "Loading environment variables from $SNAP_DATA/env"
+  export $(cat $SNAP_DATA/env | xargs)
+else
+  echo "No .env file found in $SNAP_DATA"
+fi
+
+$SNAP/bin/python3 -m daphne -b 0.0.0.0 -p 8000 swirl_server.asgi:application
