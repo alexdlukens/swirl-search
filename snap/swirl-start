@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # read in from .env file
-if [ -f $SNAP_DATA/env ]; then
-  echo "Loading environment variables from $SNAP_DATA/env"
-  export $(cat $SNAP_DATA/env | xargs)
+if [ -f $SNAP_DATA/envfile ]; then
+  echo "Loading environment variables from $SNAP_DATA/envfile"
+  export $(cat $SNAP_DATA/envfile | xargs)
 else
   echo "No .env file found in $SNAP_DATA"
 fi

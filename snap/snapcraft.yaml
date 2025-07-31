@@ -21,13 +21,16 @@ parts:
     plugin: python
     python-requirements: 
     - requirements.txt
-    source: https://github.com/swirlai/swirl-search.git
+    source: https://github.com/alexdlukens/swirl-search.git
+    source-type: git
+    source-branch: snap
     stage-packages:
       - python3
     
     override-build: |
       # copy over swirl_server dir
       cp -r $SNAPCRAFT_PART_SRC/swirl_server $SNAPCRAFT_PART_INSTALL
+      cp -r $SNAPCRAFT_PART_SRC/swirl $SNAPCRAFT_PART_INSTALL
       cp -r $SNAPCRAFT_PART_SRC/SearchProviders $SNAPCRAFT_PART_INSTALL
       cp -r $SNAPCRAFT_PART_SRC/uploads $SNAPCRAFT_PART_INSTALL
       cp $SNAPCRAFT_PART_SRC/manage.py $SNAPCRAFT_PART_INSTALL
@@ -42,7 +45,7 @@ parts:
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin
       cp $SNAPCRAFT_PART_SRC/snap/swirl-start $SNAPCRAFT_PART_INSTALL/bin/
-      cp $SNAPCRAFT_PART_SRC/.env $SNAPCRAFT_PART_INSTALL/env
+      cp $SNAPCRAFT_PART_SRC/envfile $SNAPCRAFT_PART_INSTALL/envfile
       chmod +x $SNAPCRAFT_PART_INSTALL/bin/swirl-start
       craftctl default
 
