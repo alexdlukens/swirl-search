@@ -21,8 +21,8 @@ if [ ! -f $SNAP_DATA/src/.setup_complete ]; then
   echo "Performing first time setup..."
   echo "downloading nltk resources..."
   $SNAP_DATA/src/download-nltk-resources.sh
-  echo "Performing swirl.py setup..."
-  $SNAP/bin/python3 swirl.py setup
+  echo "Performing manage.py collectstatic setup..."
+  $SNAP/bin/python3 manage.py collectstatic --no-input
   # echo "Performing UI installation..."
   # $SNAP_DATA/src/install-ui.sh
   touch $SNAP_DATA/src/.setup_complete
