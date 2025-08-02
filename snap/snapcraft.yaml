@@ -40,14 +40,26 @@ parts:
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin
       cp $SNAPCRAFT_PART_SRC/snap/swirl-start $SNAPCRAFT_PART_INSTALL/bin/
+      cp $SNAPCRAFT_PART_SRC/snap/celery-start $SNAPCRAFT_PART_INSTALL/bin/
       cp $SNAPCRAFT_PART_SRC/envfile $SNAPCRAFT_PART_INSTALL/envfile
       cp $SNAPCRAFT_PART_SRC/db.sqlite3.dist $SNAPCRAFT_PART_INSTALL/db.sqlite3.dist
       chmod +x $SNAPCRAFT_PART_INSTALL/bin/swirl-start
+      chmod +x $SNAPCRAFT_PART_INSTALL/bin/celery-start
       craftctl default
 
 apps:
   swirl-search:
     command: bin/swirl-start
+    daemon: simple
+    restart-condition: always
+    plugs:
+      - network
+      - network-bind
+    environment:
+      PYTHONPATH: "$PYTHONPATH:$SNAP/"
+
+  celery-worker:
+    command: bin/celery-start
     daemon: simple
     restart-condition: always
     plugs:

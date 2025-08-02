@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+
+# check and do first time setup
+if [ ! -f $SNAP_DATA/src/.setup_complete ]; then
+  echo "Waiting for first time setup to complete..."
+  sleep 5
+fi
+
+# read in from .env file
+if [ -f $SNAP_DATA/src/envfile ]; then
+  echo "Loading environment variables from $SNAP_DATA/envfile"
+  export $(cat $SNAP_DATA/src/envfile | xargs)
+else
+  echo "No .env file found in $SNAP_DATA/src"
+  exit 1;
+fi
+
+cd $SNAP_DATA/src && $SNAP/bin/python3 -m celery -A swirl_server worker
