@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # read in from .env file
-if [ -f $SNAP_DATA/envfile ]; then
+if [ -f $SNAP_DATA/src/envfile ]; then
   echo "Loading environment variables from $SNAP_DATA/envfile"
-  export $(cat $SNAP_DATA/envfile | xargs)
+  export $(cat $SNAP_DATA/src/envfile | xargs)
 else
   echo "No .env file found in $SNAP_DATA"
 fi
 
-$SNAP/bin/python3 -m daphne -b 0.0.0.0 -p 8000 swirl_server.asgi:application
+cd $SNAP_DATA/src && $SNAP/bin/python3 -m daphne -b 0.0.0.0 -p 8000 swirl_server.asgi:application

@@ -29,13 +29,8 @@ parts:
     
     override-build: |
       # copy over swirl_server dir
-      cp -r $SNAPCRAFT_PART_SRC/swirl_server $SNAPCRAFT_PART_INSTALL
-      cp -r $SNAPCRAFT_PART_SRC/swirl $SNAPCRAFT_PART_INSTALL
-      cp -r $SNAPCRAFT_PART_SRC/SearchProviders $SNAPCRAFT_PART_INSTALL
-      cp -r $SNAPCRAFT_PART_SRC/uploads $SNAPCRAFT_PART_INSTALL
-      cp $SNAPCRAFT_PART_SRC/manage.py $SNAPCRAFT_PART_INSTALL
-      cp $SNAPCRAFT_PART_SRC/swirl.py $SNAPCRAFT_PART_INSTALL
-      cp $SNAPCRAFT_PART_SRC/requirements.txt $SNAPCRAFT_PART_INSTALL
+      cp -r $SNAPCRAFT_PART_SRC/ $SNAPCRAFT_PART_INSTALL
+
       craftctl default
 
   swirl-start:
