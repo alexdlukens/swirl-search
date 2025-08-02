@@ -1,9 +1,15 @@
 #!/bin/bash
 
+set -e
+
 # if $SNAP_DATA/envfile does not exist, create it
 if [ ! -f $SNAP_DATA/envfile ]; then
   cp $SNAP/envfile $SNAP_DATA/envfile
-    echo "Created $SNAP_DATA/envfile from $SNAP/envfile"
+  # use sed to update the SQL_DATABASE line by resolving the path
+  # replace everything after SQL_DATABASE= with the path to the database in $SNAP_DATA
+  sed -i "s|SQL_DATABASE=.*|SQL_DATABASE=${SNAP_DATA}/db.sqlite3|" $SNAP_DATA/envfile
+  # ensure the database file path is correct
+  echo "Created $SNAP_DATA/envfile from $SNAP/envfile"
 else
   echo "Using existing environment variables from $SNAP_DATA/envfile"
 fi
@@ -11,6 +17,8 @@ fi
 # if $SNAP_DATA/db.sqlite3 does not exist, copy from $SNAP/db.sqlite3.dist
 if [ ! -f $SNAP_DATA/db.sqlite3 ]; then
   cp $SNAP/db.sqlite3.dist $SNAP_DATA/db.sqlite3
+  # ensure the database file is created
   echo "Created $SNAP_DATA/db.sqlite3 from $SNAP/db.sqlite3.dist"
 else
   echo "Using existing database from $SNAP_DATA/db.sqlite3"
+fi
