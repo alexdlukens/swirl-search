@@ -19,8 +19,8 @@ if [ ! -f $SNAP_DATA/src/.setup_complete ]; then
   $SNAP_DATA/src/download-nltk-resources.sh
   echo "Performing swirl.py setup..."
   $SNAP/bin/python3 swirl.py setup
-  echo "Performing UI installation..."
-  $SNAP_DATA/src/install-ui.sh
+  # echo "Performing UI installation..."
+  # $SNAP_DATA/src/install-ui.sh
   touch $SNAP_DATA/src/.setup_complete
   echo "Setup complete."
 else
