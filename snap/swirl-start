@@ -7,7 +7,11 @@ if [ -f $SNAP_DATA/src/envfile ]; then
   echo "Loading environment variables from $SNAP_DATA/envfile"
   export $(cat $SNAP_DATA/src/envfile | xargs)
 else
-  echo "No .env file found in $SNAP_DATA"
+  echo "No .env file found in $SNAP_DATA/src"
+  if [ ! -f $SNAP_DATA/src/.setup_complete ]; then
+    echo "Sleeping for 5 seconds to allow for env file creation..."
+    sleep 5
+  fi
   exit 1;
 fi
 
