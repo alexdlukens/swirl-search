@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pre-chat/pre-chat.component.scss"],
+  "sourcesContent": ["/* Custom styles if needed */\nh3 {\n    color: red;\n  }\n"],
+  "mappings": "AACA,GACI,MAAA",
+  "names": []
+}

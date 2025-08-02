@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/results/results.component.scss"],
+  "sourcesContent": ["/* Deselect All Button Styled as a Link */\n.select-deselect-link {\n    font-size: 0.75rem; /* Match design */\n    font-weight: 700; /* Bold text */\n    /* text-decoration: none; Remove underline by default */\n    margin-right: 0.5rem; /* Add spacing to the right */\n    line-height: 1.5rem; /* Match toggle height for alignment */\n    cursor: pointer; /* Pointer cursor for better UX */\n  }\n"],
+  "mappings": "AACA,CAAA,qBACI,UAAA,OACA,YAAA,IAEA,aAAA,MACA,YAAA,OACA,OAAA",
+  "names": []
+}

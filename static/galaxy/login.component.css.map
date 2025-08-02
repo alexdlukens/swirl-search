@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/login/login.component.scss"],
+  "sourcesContent": [".form-control {\n    border: 3px solid var(--color-background-blue);\n    line-height: 2rem;\n}\n\n.divider {\n    display: flex;\n    align-items: center;\n    text-align: center;\n}\n\n.divider-text {\n    margin: 0 2rem; /* Add spacing around the text */\n    white-space: nowrap; /* Prevent text wrapping */\n    font-size: 0.875rem;\n}\n\n.divider::before,\n.divider::after {\n    content: \"\";\n    flex: 1; /* Allows the lines to grow and fill the space */\n    border-top: 1px solid var(--color-bright-blue);\n}\n"],
+  "mappings": "AAAA,CAAA,aACI,OAAA,IAAA,MAAA,IAAA,yBACA,YAAA,KAGJ,CAAA,QACI,QAAA,KACA,YAAA,OACA,WAAA,OAGJ,CAAA,aAXA,OAYI,EAAA,KACA,YAAA,OACA,UAAA,QAGJ,CAZA,OAYA,QAAA,CAZA,OAYA,OAEI,QAAA,GACA,KAAA,EACA,WAAA,IAAA,MAAA,IAAA",
+  "names": []
+}

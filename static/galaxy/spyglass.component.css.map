@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/spyglass/spyglass.component.scss"],
+  "sourcesContent": [".sources-column {\n    padding: 0;\n    margin: 0;\n    overflow-x: hidden; /* Prevent content overflow */\n    border: 0;\n  }\n"],
+  "mappings": "AAAA,CAAA,eAAA,QACI,EADJ,OAEI,EACA,WAAA,OACA,OAAA",
+  "names": []
+}

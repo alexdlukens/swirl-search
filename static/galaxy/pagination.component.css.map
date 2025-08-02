@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/pagination/pagination.component.scss"],
+  "sourcesContent": ["/* Pagination Container */\n.pagination {\n  background-color: transparent;\n}\n\n/* Pagination Items */\n.pagination .page-item {\n  background-color: transparent;\n}\n\n/* Pagination Links */\n.pagination .page-link {\n  background-color: transparent;\n  color: var(--color-bright-blue);\n  font-size: 0.875rem;\n  font-weight: 700;\n  min-width: 3rem; /* Set minimum width to fit \"Prev\" and \"Next\" */\n  padding: 0.5rem 1rem; /* Add padding for a consistent clickable area */\n  border: 3px solid var(--color-light-gray);\n  text-align: center;\n  cursor: pointer;\n}\n\n/* Disable Pagination Link */\n.pagination .page-item.disabled .page-link {\n  color: var(--color-black);\n  pointer-events: none; /* Ensure it's non-clickable */\n}\n\n/* Active Pagination Link (Selected Page) */\n.pagination .page-item.active .page-link {\n  background-color: var(--color-background-blue);\n  border: 3px solid var(--color-background-blue);\n  color: var(--color-black);\n}\n"],
+  "mappings": "AACA,CAAA,WAKA,CALA,WAKA,CAAA,UAJE,iBAAA,YASF,CAVA,WAUA,CAAA,UACE,iBAAA,YACA,MAAA,IAAA,qBACA,UAAA,QACA,YAAA,IACA,UAAA,KAhBF,QAiBE,MAAA,KACA,OAAA,IAAA,MAAA,IAAA,oBACA,WAAA,OACA,OAAA,QAIF,CAvBA,WAuBA,CAlBA,SAkBA,CAAA,SAAA,CAbA,UAcE,MAAA,IAAA,eACA,eAAA,KAIF,CA7BA,WA6BA,CAxBA,SAwBA,CAAA,OAAA,CAnBA,UAoBE,iBAAA,IAAA,yBACA,OAAA,IAAA,MAAA,IAAA,yBACA,MAAA,IAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/charts-container/charts-container.component.scss"],
+  "sourcesContent": [".charts-container {\n    display: flex;\n    flex-direction: row;      // Arrange items side by side\n    flex-wrap: wrap;          // Allow items to wrap onto new rows\n    gap: 2rem;               // Space between charts\n    justify-content: center;  // Center them horizontally if desired\n}\n\n  /* Ensure each galaxy-chart takes up a defined width and height */\n  .charts-container > galaxy-chart {\n    flex: 1 1 calc(50% - 2rem); /* For 2 charts per row; adjust to 33.33% for 3 per row */\n    max-width: calc(50% - 2rem);\n    min-height: 300px;          /* Set a minimum height (adjust as needed) */\n}\n"],
+  "mappings": "AAAA,CAAA,iBACI,QAAA,KACA,eAAA,IACA,UAAA,KACA,IAAA,KACA,gBAAA,OAIF,CATF,gBASE,CAAA,aACE,KAAA,EAAA,EAAA,KAAA,IAAA,EAAA,MACA,UAAA,KAAA,IAAA,EAAA,MACA,WAAA",
+  "names": []
+}

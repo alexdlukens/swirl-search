@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-chat/chat-profile-box/chat-profile-box.component.scss"],
+  "sourcesContent": [".dropdown-item {\n    font-weight: 600;\n}\n\n.dropdown-divider {\n    border-top: 3px solid var(--color-white);\n}\n"],
+  "mappings": "AAAA,CAAA,cACI,YAAA,IAGJ,CAAA,iBACI,WAAA,IAAA,MAAA,IAAA",
+  "names": []
+}

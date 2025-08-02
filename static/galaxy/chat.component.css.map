@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-chat/chat/chat.component.scss"],
+  "sourcesContent": ["\n/* Fixed width for user and assistant messages */\n.chat-message.user-input,\n.chat-message.assistant-reply {\n  width: 1000px;\n  margin: 0 auto;\n}\n\n/* Enable text selection */\n.chat-message {\n  user-select: text;\n}\n\n/* Chatbox styles */\n.user-input {\n  background-color: var(--color-white);\n  border: 1px solid var(--color-light-gray);\n}\n\n.assistant-reply {\n  background-color: var(--color-light-blue);\n  border: 1px solid var(--color-background-blue);\n}\n\n.message-role {\n  font-size: 1.25rem;\n  color: var(--color-bright-blue);\n}\n\n.ai-chat-metadata {\n  font-size: 0.75rem;\n  font-weight: 700;\n}\n"],
+  "mappings": "AAEA,CAAA,YAAA,CAAA,WAAA,CAAA,YAAA,CAAA,gBAEE,MAAA,OAHF,OAIE,EAAA,KAIF,CAPA,aAQE,oBAAA,KAAA,YAAA,KAIF,CAZA,WAaE,iBAAA,IAAA,eACA,OAAA,IAAA,MAAA,IAAA,oBAGF,CAjBA,gBAkBE,iBAAA,IAAA,oBACA,OAAA,IAAA,MAAA,IAAA,yBAGF,CAAA,aACE,UAAA,QACA,MAAA,IAAA,qBAGF,CAAA,iBACE,UAAA,OACA,YAAA",
+  "names": []
+}

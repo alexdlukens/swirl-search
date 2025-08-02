@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/title-field/title-field.component.scss"],
+  "sourcesContent": ["/* Apply semi-bold to title content */\n.title {\n    font-weight: 600;\n}\n\n.pub-date {\n    font-size: 0.75rem;\n    color: var(--color-pillbox-gray);\n}\n\n.pub-date .label {\n    font-weight: 500; /* Bold weight for the label */\n}\n\n.pub-date .value {\n    font-weight: 800; /* Regular weight for the date */\n}\n"],
+  "mappings": "AACA,CAAA,MACI,YAAA,IAGJ,CAAA,SACI,UAAA,OACA,MAAA,IAAA,sBAGJ,CALA,SAKA,CAAA,MACI,YAAA,IAGJ,CATA,SASA,CAAA,MACI,YAAA",
+  "names": []
+}

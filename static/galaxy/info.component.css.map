@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/info/info.component.scss"],
+  "sourcesContent": [".info-container p {\n    font-size: 0.75rem;\n    font-weight: 700;\n}\n"],
+  "mappings": "AAAA,CAAA,eAAA,EACI,UAAA,OACA,YAAA",
+  "names": []
+}

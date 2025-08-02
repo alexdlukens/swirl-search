@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/summary/summary.component.scss"],
+  "sourcesContent": [".ai-summary-heading {\n    margin-bottom: 0.5rem; /* Equivalent to Bootstrap's mb-2 */\n    color: var(--color-bright-blue);\n    font-weight: 700;\n    font-size: 1.5rem;\n}\n\n.ai-error-wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    color: var(--color-error); /* Use your existing error color variable */\n    padding: 3.5rem; /* Large padding for space around */\n    margin: 1.5rem 0; /* Space above and below */\n}\n\n.ai-summary-metadata {\n    font-size: 0.75rem;\n    font-weight: 700;\n    text-align: right;\n}\n\n.ai-summary-spinner {\n    color: var(--color-bright-blue);\n  }\n"],
+  "mappings": "AAAA,CAAA,mBACI,cAAA,MACA,MAAA,IAAA,qBACA,YAAA,IACA,UAAA,OAGJ,CAAA,iBACI,QAAA,KACA,gBAAA,OACA,YAAA,OACA,WAAA,OACA,MAAA,IAAA,eAZJ,QAaI,OAbJ,OAcI,OAAA,EAGJ,CAAA,oBACI,UAAA,OACA,YAAA,IACA,WAAA,MAGJ,CAAA,mBACI,MAAA,IAAA",
+  "names": []
+}

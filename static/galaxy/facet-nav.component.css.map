@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/facet-nav/facet-nav.component.scss"],
+  "sourcesContent": [".list-group-item.facet-header {\n    font-weight: 600;\n    background-color: var(--color-light-gray);\n    margin-bottom: 0; /* Ensure no space below the header */\n    margin-right: 0;\n    border: 1px solid var(--color-light-gray);\n}\n\n.facet-box {\n    border: 1px solid var(--color-light-gray);\n}\n"],
+  "mappings": "AAAA,CAAA,eAAA,CAAA,aACI,YAAA,IACA,iBAAA,IAAA,oBACA,cAAA,EACA,aAAA,EACA,OAAA,IAAA,MAAA,IAAA,oBAGJ,CAAA,UACI,OAAA,IAAA,MAAA,IAAA",
+  "names": []
+}

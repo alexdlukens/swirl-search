@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/spyglass-search/result-card/result-card.component.scss"],
+  "sourcesContent": [".result-number {\n  color: var(--color-bright-blue);\n  display: inline-block;\n  min-width: 3ch;\n}\n\n/* Star icon styles */\n.star {\n  width: 24px; /* Adjust as needed to match the actual star icon size */\n  height: 24px;\n}\n\n.star-placeholder {\n  width: 24px;\n  height: 24px;\n  visibility: hidden; /* Ensure it's invisible but still occupies space */\n}\n\n/* Authorship layout styles */\n.authorship {\n  width: 100%;\n  font-size: 0.75rem;\n  display: flex;\n  justify-content: flex-start;\n}\n\n/* Show Hide details styles */\n.show-details {\n  font-size: 0.75rem;\n  font-weight: 700;\n}\n\n.details {\n  font-size: 0.875rem;\n  line-height: 1rem;\n  padding-left: 3.5ch;\n}\n\n.result-body {\n  padding-left: 3ch;\n}\n"],
+  "mappings": "AAAA,CAAA,cACE,MAAA,IAAA,qBACA,QAAA,aACA,UAAA,IAIF,CAAA,KACE,MAAA,KACA,OAAA,KAGF,CAAA,iBACE,MAAA,KACA,OAAA,KACA,WAAA,OAIF,CAAA,WACE,MAAA,KACA,UAAA,OACA,QAAA,KACA,gBAAA,WAIF,CAAA,aACE,UAAA,OACA,YAAA,IAGF,CAAA,QACE,UAAA,QACA,YAAA,KACA,aAAA,MAGF,CAAA,YACE,aAAA",
+  "names": []
+}
