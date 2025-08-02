@@ -46,6 +46,7 @@ parts:
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin
       cp $SNAPCRAFT_PART_SRC/snap/swirl-start $SNAPCRAFT_PART_INSTALL/bin/
       cp $SNAPCRAFT_PART_SRC/envfile $SNAPCRAFT_PART_INSTALL/envfile
+      cp $SNAPCRAFT_PART_SRC/db.sqlite3.dist $SNAPCRAFT_PART_INSTALL/db.sqlite3.dist
       chmod +x $SNAPCRAFT_PART_INSTALL/bin/swirl-start
       craftctl default
 
