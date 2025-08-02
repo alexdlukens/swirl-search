@@ -26,8 +26,3 @@ if [ ! -f $SNAP_DATA/src/db.sqlite3 ]; then
 else
   echo "Using existing database from $SNAP_DATA/src/db.sqlite3"
 fi
-
-# now run the setup
-export $(cat $SNAP_DATA/src/envfile | xargs)
-cd $SNAP_DATA/src && $SNAP/bin/python3 swirl.py setup
-$SNAP_DATA/src/download-nltk-resources.sh

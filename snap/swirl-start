@@ -1,11 +1,30 @@
 #!/bin/bash
 
+set -e
+
 # read in from .env file
 if [ -f $SNAP_DATA/src/envfile ]; then
   echo "Loading environment variables from $SNAP_DATA/envfile"
   export $(cat $SNAP_DATA/src/envfile | xargs)
 else
   echo "No .env file found in $SNAP_DATA"
+  exit 1;
+fi
+
+# check and do first time setup
+if [ ! -f $SNAP_DATA/src/.setup_complete ]; then
+  cd $SNAP_DATA/src
+  echo "Performing first time setup..."
+  echo "downloading nltk resources..."
+  $SNAP_DATA/src/download-nltk-resources.sh
+  echo "Performing swirl.py setup..."
+  $SNAP/bin/python3 swirl.py setup
+  echo "Performing UI installation..."
+  $SNAP_DATA/src/install-ui.sh
+  touch $SNAP_DATA/src/.setup_complete
+  echo "Setup complete."
+else
+  echo "Setup already completed, skipping first time setup."
 fi
 
 cd $SNAP_DATA/src && $SNAP/bin/python3 -m daphne -b 0.0.0.0 -p 8000 swirl_server.asgi:application
