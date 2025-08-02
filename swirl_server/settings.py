@@ -292,6 +292,7 @@ SWIRL_SEARCH_FORM_URL = env('SWIRL_SEARCH_FORM_URL', default=SWIRL_SEARCH_FORM_U
 SWIRL_DEFAULT_RESULT_BLOCK = 'ai_summary'
 
 OPENAI_API_KEY = env.get_value('OPENAI_API_KEY', default='')
+OPENAI_ENDPOINT = env.get_value("OPENAI_ENDPOINT", default='')
 AZURE_OPENAI_KEY = env.get_value('AZURE_OPENAI_KEY', default='')
 AZURE_OPENAI_ENDPOINT = env.get_value('AZURE_OPENAI_ENDPOINT', default='')
 AZURE_MODEL = env.get_value('AZURE_MODEL', default='')

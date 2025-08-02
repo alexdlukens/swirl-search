@@ -26,6 +26,7 @@ class OpenAIClient:
 
         self._usage = usage
         self._openapi_key     = getattr(settings, 'OPENAI_API_KEY', None)
+        self._openai_endpoint = getattr(settings, "OPENAI_ENDPOINT", None)
         self._azure_model     = getattr(settings, "AZURE_MODEL", None)
         self._azureapi_key    = getattr(settings, 'AZURE_OPENAI_KEY', None)
         self._azure_endpoint  = getattr(settings, "AZURE_OPENAI_ENDPOINT", None)
@@ -34,7 +35,8 @@ class OpenAIClient:
         self._swirl_rag_model = getattr(settings,'SWIRL_RAG_MODEL',None)
 
         logger.debug(f'cons config : {self._openapi_key} {self._azure_model}'
-                    f'{self._azureapi_key} {self._azure_endpoint} {self._swirl_rw_model} {self._swirl_q_model} {self._swirl_rag_model}')
+                    f'{self._azureapi_key} {self._azure_endpoint} {self._swirl_rw_model} {self._swirl_q_model} {self._swirl_rag_model}'
+                    f'{self._openai_endpoint}')
 
         self._api_key = None
         self._api_provider = None
@@ -56,7 +58,7 @@ class OpenAIClient:
         try:
             if provider == "OPENAI":
                 from openai import OpenAI
-                ai_client = OpenAI(api_key=key)
+                ai_client = OpenAI(api_key=key, base_url=self._openai_endpoint or None)
             elif provider == "AZUREAI":
                 from openai import AzureOpenAI
                 ai_client = AzureOpenAI(api_key=key, azure_endpoint=self._azure_endpoint, api_version="2023-10-01-preview")
