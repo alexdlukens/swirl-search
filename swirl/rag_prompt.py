@@ -27,7 +27,11 @@ class RagPrompt():
         self._is_full = False
         self._num_tokens = 0
         self._last_chunk_status = RAG_PROMPT_CHUNK_OK
-        self._model_encoding = tiktoken.encoding_for_model(model)
+        try:
+            self._model_encoding = tiktoken.encoding_for_model(model)
+        except KeyError:
+            logger.warning(f"Model {model} not found in tiktoken encodings, using gpt2 encoding as fallback.")
+            self._model_encoding = tiktoken.get_encoding("gpt2")
 
         self._prompt_footer = (
         f"\n\n\n\n--- Final Instructions ---\nIn your response do not assume people with vastly different work histories are the same person. "
