@@ -20,6 +20,7 @@ from swirl.connectors.mongodb import MongoDB
 from swirl.connectors.snowflake import Snowflake
 from swirl.connectors.oracle import Oracle
 from swirl.connectors.pinecone import PineconeDB
+from swirl.connectors.beautifulsoup import BeautifulSoupRTDExtractor
 
 # uncomment the line below to enable PostgreSQL
 # from swirl.connectors.postgresql import PostgreSQL
