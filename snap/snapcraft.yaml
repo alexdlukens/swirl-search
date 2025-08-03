@@ -41,10 +41,12 @@ parts:
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin
       cp $SNAPCRAFT_PART_SRC/snap/swirl-start $SNAPCRAFT_PART_INSTALL/bin/
       cp $SNAPCRAFT_PART_SRC/snap/celery-start $SNAPCRAFT_PART_INSTALL/bin/
+      cp $SNAPCRAFT_PART_SRC/snap/swirl-load $SNAPCRAFT_PART_INSTALL/bin/
       cp $SNAPCRAFT_PART_SRC/envfile $SNAPCRAFT_PART_INSTALL/envfile
       cp $SNAPCRAFT_PART_SRC/db.sqlite3.dist $SNAPCRAFT_PART_INSTALL/db.sqlite3.dist
       chmod +x $SNAPCRAFT_PART_INSTALL/bin/swirl-start
       chmod +x $SNAPCRAFT_PART_INSTALL/bin/celery-start
+      chmod +x $SNAPCRAFT_PART_INSTALL/bin/swirl-load
       craftctl default
 
 apps:
@@ -62,6 +64,14 @@ apps:
     command: bin/celery-start
     daemon: simple
     restart-condition: always
+    plugs:
+      - network
+      - network-bind
+    environment:
+      PYTHONPATH: "$PYTHONPATH:$SNAP/"
+
+  swirl-load:
+    command: bin/swirl-load
     plugs:
       - network
       - network-bind
